@@ -18,7 +18,7 @@ class UserDash extends Component {
   componentWillUnmount() {
     this.props.ChatBoxFunc('false');
   }
-  
+
   // componentWillMount() {
   //   console.log("in component will mount ")
   //   this.props.getEventsByUserId(userId);
@@ -94,6 +94,8 @@ function mapStateToProps(state) {
 
 UserDash.propTypes = {
   userHistory: PropTypes.array,
+  ChatBoxFunc: PropTypes.func,
+  boxStatus: PropTypes.string,
 };
 
 export default connect(mapStateToProps, { ChatBoxFunc })(UserDash);
